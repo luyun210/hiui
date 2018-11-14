@@ -28,6 +28,7 @@ class Doc extends Component {
   // }
 
   componentDidMount () {
+
     // window.addEventListener('hashchange', this.hashChangeEvent)
   }
 
@@ -89,7 +90,7 @@ class Doc extends Component {
     return (
       <React.Fragment>
         <Logo
-          url='/'
+          url='https://xiaomi.github.io/hiui/'
           logoUrl={logoImg}
           height={40}
           text='HIUI Design'
@@ -99,10 +100,10 @@ class Doc extends Component {
           {/* <li><Link to={`/${locale}/docs/design`} className={doc === 'design' ? 'active' : ''}>设计规范</Link></li> */}
           <li><Link to={`/${locale}/components`} className={doc === 'components' ? 'active' : ''}>组件</Link></li>
           <li>
-            <LocaleDropdown />
+            <LocaleDropdown locale={locale} />
           </li>
           <li>
-            <ThemeDropdown />
+            <ThemeDropdown locale={locale} />
           </li>
         </ul>
       </React.Fragment>
